@@ -10,11 +10,17 @@ http://localhost:8080/
 
 ## installation and running the app
 To install and run use the following commands from root directory
-
+(Docker service persumed to be exists and running)
 ```bash
 $ mvn install
 $ docker build -t net-price-calculator .
 $ docker run -dp 8080:8080 net-price-calculator
+
+If no docker service it could be run manullay
+
+$ mvn install
+$ cd target
+$ java -jar net-price-calculator-0.0.1-SNAPSHOT.jar
 ## ENDPOINTS:
 client demo ==> http://localhost:8080/
 sevice endpint ==> http://localhost:8080/api/net_price?country={COUNTRY}&price={PRICE}
